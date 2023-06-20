@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            border: 2px black dotted;
+            display: inline-block;
+        }
+
+        .normalDiv {
+            display: inline-block;
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+
+        #activeDiv1 {
+            background-color: green;
+            top: 50px;
+        }
+
+        #activeDiv2 {
+            background-color: green;
+            position: relative;
+            top: 25px;
+            left: 25px;
+
+        }
+        #activeDiv3 {
+            background-color: green;
+            position: absolute;
+            top: 25px;
+            left: 25px;
+        }
+
+        .secoundParent {
+            position: absolute;
+            width: 600px;
+            height: 300px;
+            background-color: gray;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="normalDiv">One</div>
+        <div class="normalDiv" id="activeDiv1">Two</div>
+        <div class="normalDiv">Three</div>
+        <div class="normalDiv">Four</div>
+    </div>
+
+    <br><br>
+
+    <div class="parent">
+        <div class="normalDiv">One</div>
+        <div class="normalDiv" id="activeDiv2">Two</div>
+        <div class="normalDiv">Three</div>
+        <div class="normalDiv">Four</div>
+    </div>
+
+    <br><br><br><br>
+
+    <div class="secoundParent">
+        <div class="parent">
+            <div class="normalDiv">One</div>
+            <div class="normalDiv" id="activeDiv3">Two</div>
+            <div class="normalDiv">Three</div>
+            <div class="normalDiv">Four</div>
+        </div>
+    </div>
+    
+</body>
+</html>
