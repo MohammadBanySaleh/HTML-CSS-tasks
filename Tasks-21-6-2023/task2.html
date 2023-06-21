@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mainParent {
+            position: absolute;
+            left: 50%;
+            margin-left: -250px;
+        }
+        .upperParent {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            width: 500px;
+            gap: 10px;
+        }
+        .normalDiv {
+            /* width: 50px; */
+            height: 70px;
+        }
+        .d1 {
+            background-color: grey;
+            grid-column: 1/4;
+            height: 20px;
+        }
+        .d2 {
+            background-color: blue;
+            grid-column: 1/3;
+        }
+        .d3 {
+            background-color: cyan;
+        }
+        .d4, .d5, .d6 {
+            background-color: yellow;
+        }
+        .d7 {
+            background-color: cyan;
+        }
+        .d8 {
+            background-color: blue;
+            grid-column: 2/4;
+        }
+
+        .lowerParent {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            width: 500px;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .db1, .db2, .db3, .db4 {
+            background-color: orange;
+        }
+
+        .db5 {
+            background-color: grey;
+            grid-column: 1/5;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainParent">
+
+        <div class="upperParent">
+            <div class="normalDiv d1"></div>
+            <div class="normalDiv d2"></div>
+            <div class="normalDiv d3"></div>
+            <div class="normalDiv d4"></div>
+            <div class="normalDiv d5"></div>
+            <div class="normalDiv d6"></div>
+            <div class="normalDiv d7"></div>
+            <div class="normalDiv d8"></div>
+        </div>
+        <div class="lowerParent">
+            <div class="normalDiv db1"></div>
+            <div class="normalDiv db2"></div>
+            <div class="normalDiv db3"></div>
+            <div class="normalDiv db4"></div>
+            <div class="normalDiv db5"></div>
+        </div>
+
+    </div>
+</body>
+</html>
