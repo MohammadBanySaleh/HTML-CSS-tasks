@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .upperParent {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+            width: 100%;
+
+        }
+
+        .lowerParent {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            width: 100%;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .header {
+            background-color: chartreuse;
+            grid-column: 1/4;
+            height: 235px;
+        }
+
+        .middle {
+            background-color: aqua;
+            height: 275px;
+        }
+
+        .footer {
+            background-color: gray;
+            height: 150px;
+        }
+
+        @media screen and (min-width: 481px) and (max-width: 768px) {
+            .middle {
+                grid-column: 1/4;
+                height: 125px;
+            }
+
+            .lowerParent {
+                display: grid;
+                grid-template-columns: auto auto;
+                width: 100%;
+                gap: 10px;
+                margin-top: 10px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .header {
+                height: 100px;
+            }
+
+            .footer {
+                height: 100px;
+            }
+
+            .lowerParent {
+                display: grid;
+                grid-template-columns: auto;
+                width: 100%;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            .middle {
+                grid-column: 1/4;
+                height: 200px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="upperParent">
+        <div class="header">1</div>
+        <div class="middle">2</div>
+        <div class="middle">3</div>
+        <div class="middle">4</div>
+    </div>
+    <div class="lowerParent">
+        <div class="footer"></div>
+        <div class="footer"></div>
+        <div class="footer"></div>
+        <div class="footer"></div>
+    </div>
+</body>
+
+</html>
